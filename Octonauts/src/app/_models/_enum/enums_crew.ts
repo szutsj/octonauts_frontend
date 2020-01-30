@@ -1,0 +1,10 @@
+export enum Crewname {
+  CAPTAIN = 'CAPTAIN',
+  KWAZII = 'KWAZII',
+  PESO = 'PESO',
+  DASHI = 'DASHI',
+  PROFESSOR = 'PROFESSOR',
+  SHELLINGTON = 'SHELLINGTON',
+  TWEAK = 'TWEAK',
+  TUNIP = 'TUNIP'
+}

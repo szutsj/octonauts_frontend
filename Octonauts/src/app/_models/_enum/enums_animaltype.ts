@@ -1,0 +1,8 @@
+export enum AnimalType {
+  WHALE = 'WHALE',
+  LEMONSHARK = 'LEMONSHARK',
+  ORCA = 'ORCA',
+  WHITESHARK = 'WHITESHARK',
+  TURTLE = 'TURTLE',
+  BOWHEAD_WHALE = 'BOWHEAD_WHALE'
+}

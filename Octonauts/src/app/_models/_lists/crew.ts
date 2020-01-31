@@ -1,7 +1,7 @@
-import {Crew_member} from "../_mod/crew_member";
+import {CrewMember} from "../_mod/crewMember";
 
 export class Crew {
-  crewMember: Crew_member[];
+  crewMember: CrewMember[];
 
   constructor() {}
 }

@@ -1,5 +1,5 @@
 import {Patient} from "../_mod/patient";
 
-export class Patient_list{
+export class PatientList{
   patients: Patient[];
 }

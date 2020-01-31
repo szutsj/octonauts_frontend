@@ -1,6 +1,6 @@
 import {Medicine} from "../_mod/medicine";
 
-export class Medicine_stock {
+export class MedicineStock {
   medicine: Medicine[];
 
   constructor() {}

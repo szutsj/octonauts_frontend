@@ -1,7 +1,7 @@
 import {Gupname} from "../_enum/enums_guptype";
 
 export class Gup {
-  name: Gupname;
+  type: Gupname;
   active: boolean;
 
   constructor() {}

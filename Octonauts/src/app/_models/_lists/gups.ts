@@ -1,6 +1,6 @@
 import {Gup} from "../_mod/gup";
 
-export class Gup_list {
+export class Gups {
   crewMember: Gup[];
 
   constructor() {}

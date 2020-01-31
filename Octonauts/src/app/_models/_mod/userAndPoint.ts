@@ -1,4 +1,4 @@
-export class User_and_points{
+export class UserAndPoint{
   usename: string;
   points: number;
 

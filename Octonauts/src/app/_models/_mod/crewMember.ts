@@ -1,6 +1,6 @@
 import {Crewname} from "../_enum/enums_crew";
 
-export class Crew_member {
+export class CrewMember {
   name: Crewname;
   active: boolean;
 

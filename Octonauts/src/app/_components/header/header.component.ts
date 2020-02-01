@@ -19,10 +19,11 @@ export class HeaderComponent implements OnInit {
   }
 
   getUserName() {
-    this.headerService.getDataFromBackend().subscribe(response => this.userName = response.user_and_point.usename);
+    this.headerService.getDataFromBackend().subscribe(response => this.userName = response.userAndPoint.username );
   }
 
   logoutUser() {
     this.headerService.logoutUser();
   }
+
 }

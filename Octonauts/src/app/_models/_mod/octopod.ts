@@ -9,7 +9,7 @@ export class Octopod{
   gups: Gups;
   patients: PatientList;
   medicines: MedicineStock;
-  user_and_point: UserAndPoint;
+  userAndPoint: UserAndPoint;
 
 
 }

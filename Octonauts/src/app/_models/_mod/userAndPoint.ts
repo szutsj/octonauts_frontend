@@ -1,5 +1,5 @@
 export class UserAndPoint{
-  usename: string;
+  username: string;
   points: number;
 
   constructor() {}

@@ -25,6 +25,7 @@ import { MedicineStockComponent } from './_components/medicine-stock/medicine-st
 import { BuyNewMedicineComponent } from './_components/buy-new-medicine/buy-new-medicine.component';
 import { PatientsWaitingComponent } from './_components/patients-waiting/patients-waiting.component';
 import { PatientsUnderTreatmentComponent } from './_components/patients-under-treatment/patients-under-treatment.component';
+import { GupComponent } from './_components/gup/gup.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PatientsUnderTreatmentComponent } from './_components/patients-under-tr
     MedicineStockComponent,
     BuyNewMedicineComponent,
     PatientsWaitingComponent,
-    PatientsUnderTreatmentComponent
+    PatientsUnderTreatmentComponent,
+    GupComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,3 @@
-export interface imageSrc {
-  [index: string]: string;
+export interface ImageSrcList {
+  [index:string]: string;
 }

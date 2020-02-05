@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {Gups} from '../../_models/_lists/gups';
-import {GupService} from "../../_services/_new/gup.service";
+import {Component, OnInit} from '@angular/core';
 import {Gup} from "../../_models/_mod/gup";
+import {BackendService} from "../../_services/_new/backend.service";
 
 @Component({
   selector: 'app-gup-activation',
@@ -11,7 +10,7 @@ import {Gup} from "../../_models/_mod/gup";
 export class GupActivationComponent implements OnInit {
     gups: Gup[];
 
-  constructor(private gupService: GupService) {
+  constructor(private backendService: BackendService) {
     this.getGups();
     }
 
@@ -20,7 +19,7 @@ export class GupActivationComponent implements OnInit {
   }
 
   getGups(){
-    this.gupService.getDataFromBackend().subscribe(response => this.gups = response.gups);
+    this.backendService.getGupListFromBackend().subscribe(response => this.gups = response.gups);
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {CrewMember} from "../../_models/_mod/crewMember";
 
 @Component({
   selector: 'app-crew',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
+  @Input('name')
+  crewMember: CrewMember;
 
   constructor() { }
 

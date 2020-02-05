@@ -9,6 +9,8 @@ import {Octopod} from "../../_models/_mod/octopod";
 import {map, share} from "rxjs/operators";
 import {PatientList} from "../../_models/_lists/patientList";
 import {MedicineStock} from "../../_models/_lists/medicineStock";
+import {UserAndPoint} from "../../_models/_mod/userAndPoint";
+import {Crew} from "../../_models/_lists/crew";
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +21,8 @@ export class BackendService {
       'Content-Type':  'application/json',
     })
   };
-  octopodData: Octopod;
-  octopodObservable: Observable<Octopod>;
+  crewData: Crew;
+  crewObservalbe: Observable<Crew>;
   gupData: Gups;
   gupObservable: Observable<Gups>;
   waitingPatientData: PatientList;
@@ -29,6 +31,8 @@ export class BackendService {
   underTreatmentObservable: Observable<PatientList>;
   medicineStockData: MedicineStock;
   medicineStockObservable: Observable<MedicineStock>;
+  userAndPointData: UserAndPoint;
+  userAndPointsObservable: Observable<UserAndPoint>;
 
 
   constructor(private http: HttpClient, private errorHandlingService: ErrorHandlingService, private router: Router) { }
@@ -39,8 +43,8 @@ export class BackendService {
   }
 
   refreshOctopodData(): void{
-    this.octopodData = null;
-    this.octopodObservable = null;
+    this.crewData = null;
+    this.crewObservalbe = null;
   }
 
   refreshWaitingList(): void{
@@ -58,6 +62,11 @@ export class BackendService {
     this.medicineStockObservable = null;
   }
 
+  refreshPooints(): void{
+    this.medicineStockData = null;
+    this.medicineStockObservable = null;
+  }
+
   getGupListFromBackend(): Observable<Gups> {
     if (this.gupData) {
       return of(this.gupData);
@@ -71,16 +80,16 @@ export class BackendService {
     }
   }
 
-  getOctopodFromBackend(): Observable<Octopod> {
-    if (this.octopodData) {
-      return of(this.octopodData);
-    } else if (this.octopodObservable) {
-      return this.octopodObservable;
+  getCrewFromBackend(): Observable<Crew> {
+    if (this.crewData) {
+      return of(this.crewData);
+    } else if (this.crewObservalbe) {
+      return this.crewObservalbe;
     } else {
-      this.http.get<Octopod>(ROOT_URL + '/octopod')
-        .pipe(map(response => this.octopodData = response),
+      this.crewObservalbe = this.http.get<Crew>(ROOT_URL + '/octopod/crew')
+        .pipe(map(response => this.crewData = response),
           share());
-      return this.octopodObservable;
+      return this.crewObservalbe;
     }
   }
 
@@ -90,7 +99,7 @@ export class BackendService {
     } else if (this.waitingPatientsObservable) {
       return this.waitingPatientsObservable;
     } else {
-      this.http.get<PatientList>(ROOT_URL + '/octopod/patients/waiting')
+      this.waitingPatientsObservable = this.http.get<PatientList>(ROOT_URL + '/octopod/patients/waiting')
         .pipe(map(response => this.waitingPatientData = response),
           share());
       return this.waitingPatientsObservable;
@@ -103,7 +112,7 @@ export class BackendService {
     } else if (this.underTreatmentObservable) {
       return this.underTreatmentObservable;
     } else {
-      this.http.get<PatientList>(ROOT_URL + '/octopod/patients/underTreatment')
+      this.underTreatmentObservable = this.http.get<PatientList>(ROOT_URL + '/octopod/patients/underTreatment')
         .pipe(map(response => this.waitingPatientData = response),
           share());
       return this.waitingPatientsObservable;
@@ -116,10 +125,23 @@ export class BackendService {
     } else if (this.medicineStockObservable) {
       return this.medicineStockObservable;
     } else {
-      this.http.get<MedicineStock>(ROOT_URL + '/octopod/patients/underTreatment')
+      this.medicineStockObservable = this.http.get<MedicineStock>(ROOT_URL + '/octopod/medicines')
         .pipe(map(response => this.medicineStockData = response),
           share());
       return this.medicineStockObservable;
+    }
+  }
+
+  getUserAndPointFromBackend(): Observable<UserAndPoint> {
+    if (this.userAndPointData) {
+      return of(this.userAndPointData);
+    } else if (this.userAndPointsObservable) {
+      return this.userAndPointsObservable;
+    } else {
+      this.userAndPointsObservable = this.http.get<UserAndPoint>(ROOT_URL + '/octopod/points')
+        .pipe(map(response => this.userAndPointData = response),
+          share());
+      return this.userAndPointsObservable;
     }
   }
 

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HeaderService} from '../../_services/_new/header.service';
+import {BackendService} from "../../_services/_new/backend.service";
+import {HeaderService} from "../../_services/_new/header.service";
+
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   userName: string;
 
-  constructor(private headerService: HeaderService) {
+  constructor(private backendService: BackendService, private headerService: HeaderService) {
     this.getUserName();
   }
 
@@ -19,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getUserName() {
-    this.headerService.getDataFromBackend().subscribe(response => this.userName = response.userAndPoint.username );
+    this.backendService.getUserAndPointFromBackend().subscribe(response => this.userName = response.username);
   }
 
   logoutUser() {

@@ -1,4 +1,7 @@
 export enum AnimalType {
+  WHITESHARK = 'WHITESHARK',
+  TURTLE = 'TURTLE',
+  LOBSTER ='LOBSTER',
   BELUGA = 'BELUGA',
   BOB = 'BOB',
   BOWHEAD = 'BOWHEAD',

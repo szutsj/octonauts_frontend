@@ -6,7 +6,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './_auth/auth.service';
 
 import { AppComponent } from './app.component';
 
@@ -16,7 +16,7 @@ import { LoginComponent } from './_components/login/login.component';
 import { LoginFormComponent } from './_components/login-form/login-form.component';
 import { HeaderComponent } from './_components/header/header.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
-import { ServerErrorInterceptor } from './interceptors/server-error-interceptor';
+import { ServerErrorInterceptor } from './_interceptors/server-error-interceptor';
 import { GenericErrorComponent } from './_components/generic-error/generic-error.component';
 import {OctopodComponent} from './_components/octopod/octopod.component';
 import { CrewActivationComponent } from './_components/crew-activation/crew-activation.component';
@@ -26,6 +26,10 @@ import { BuyNewMedicineComponent } from './_components/buy-new-medicine/buy-new-
 import { PatientsWaitingComponent } from './_components/patients-waiting/patients-waiting.component';
 import { PatientsUnderTreatmentComponent } from './_components/patients-under-treatment/patients-under-treatment.component';
 import { GupComponent } from './_components/gup/gup.component';
+import { AnimalComponent } from './_components/animal/animal.component';
+import { CrewComponent } from './_components/crew/crew.component';
+import { MedicineComponent } from './_components/medicine/medicine.component';
+import { SicknessComponent } from './_components/sickness/sickness.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { GupComponent } from './_components/gup/gup.component';
     BuyNewMedicineComponent,
     PatientsWaitingComponent,
     PatientsUnderTreatmentComponent,
-    GupComponent
+    GupComponent,
+    AnimalComponent,
+    CrewComponent,
+    MedicineComponent,
+    SicknessComponent
   ],
   imports: [
     BrowserModule,

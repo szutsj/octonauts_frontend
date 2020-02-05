@@ -1,15 +1,16 @@
 import {ImageSrcList} from './imageSrcList'
-import {Gupname} from "../_models/_enum/enums_guptype";
 
 export class gupImageSrc {
-  src: ImageSrcList
+  src: string[];
 
   constructor(){
-    this.src[Gupname.GUPA] = '~src/assets/images/gups/gupA.png';
-    this.src[Gupname.GUPB] = '~src/assets/images/gups/gupB.png';
-    this.src[Gupname.GUPC] = '~src/assets/images/gups/gupC.png';
-    this.src[Gupname.GUPD] = '~src/assets/images/gups/gupD.png';
-    this.src[Gupname.GUPE] = '~src/asaets/images/gups/gupE.png';
+    this.src['GUPA'] = '~src/assets/images/gups/GUPA.png';
+    this.src['GUPB'] = '~src/assets/images/gups/GUPB.png';
+    this.src['GUPC'] = '~src/assets/images/gups/GUPC.png';
+    this.src['GUPD'] = '~src/assets/images/gups/GUPD.png';
+    this.src['GUPE'] = '~src/assets/images/gups/GUPE.png';
   }
+
+
 
 }

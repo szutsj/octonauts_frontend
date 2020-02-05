@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { OctopodService } from 'src/app/_services/_new/octopod.service';
+import {Component, OnInit} from '@angular/core';
+import {OctopodService} from 'src/app/_services/_new/octopod.service';
 
 @Component({
   selector: 'app-octopod',

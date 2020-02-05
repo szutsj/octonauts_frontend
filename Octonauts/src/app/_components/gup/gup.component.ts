@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {GupActivationComponent} from "../gup-activation/gup-activation.component";
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-gup',
@@ -7,10 +6,13 @@ import {GupActivationComponent} from "../gup-activation/gup-activation.component
   styleUrls: ['./gup.component.css']
 })
 export class GupComponent implements OnInit {
+  @Input('type') type: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+
   }
 
 }

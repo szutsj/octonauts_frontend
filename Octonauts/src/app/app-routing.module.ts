@@ -2,7 +2,7 @@ import { PageNotFoundComponent } from './_components/page-not-found/page-not-fou
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './_components/login/login.component';
-import { AuthGuard } from './auth/auth.guard';
+import { AuthGuard } from './_auth/auth.guard';
 import { GenericErrorComponent } from './_components/generic-error/generic-error.component';
 import {OctopodComponent} from "./_components/octopod/octopod.component";
 

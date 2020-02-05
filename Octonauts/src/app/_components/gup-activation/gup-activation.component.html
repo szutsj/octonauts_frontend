@@ -1,7 +1,1 @@
-<div *ngFor="let level of levels" class="row mt-5 align-items-center">
-  <div class="col-md-2 level-icons">
-    <div *ngFor="let i of [].constructor(level)" class="mx-auto text-center image-position">
-      <img src="assets/images/{{type}}.png" class="level-image" />
-    </div>
-  </div>
-</div>
+<app-gup *ngFor="let gup of gups" [type]="gup.type"></app-gup>

@@ -11,25 +11,28 @@ import { AuthService } from './_auth/auth.service';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { RegisterFormComponent } from './_components/register-form/register-form.component';
-import { LoginComponent } from './_components/login/login.component';
-import { LoginFormComponent } from './_components/login-form/login-form.component';
+import { RegisterFormComponent } from './_components/_loginAndStuff/register-form/register-form.component';
+import { LoginComponent } from './_components/_loginAndStuff/login/login.component';
+import { LoginFormComponent } from './_components/_loginAndStuff/login-form/login-form.component';
 import { HeaderComponent } from './_components/header/header.component';
-import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './_components/_loginAndStuff/page-not-found/page-not-found.component';
 import { ServerErrorInterceptor } from './_interceptors/server-error-interceptor';
-import { GenericErrorComponent } from './_components/generic-error/generic-error.component';
+import { GenericErrorComponent } from './_components/_loginAndStuff/generic-error/generic-error.component';
 import {OctopodComponent} from './_components/octopod/octopod.component';
-import { CrewActivationComponent } from './_components/crew-activation/crew-activation.component';
-import { GupActivationComponent } from './_components/gup-activation/gup-activation.component';
-import { MedicineStockComponent } from './_components/medicine-stock/medicine-stock.component';
-import { BuyNewMedicineComponent } from './_components/buy-new-medicine/buy-new-medicine.component';
-import { PatientsWaitingComponent } from './_components/patients-waiting/patients-waiting.component';
-import { PatientsUnderTreatmentComponent } from './_components/patients-under-treatment/patients-under-treatment.component';
-import { GupComponent } from './_components/gup/gup.component';
-import { AnimalComponent } from './_components/animal/animal.component';
-import { CrewComponent } from './_components/crew/crew.component';
-import { MedicineComponent } from './_components/medicine/medicine.component';
-import { SicknessComponent } from './_components/sickness/sickness.component';
+import { CrewActivationComponent } from './_components/_crew/crew-activation/crew-activation.component';
+import { GupActivationComponent } from './_components/_gups/gup-activation/gup-activation.component';
+import { MedicineStockComponent } from './_components/_medicines/medicine-stock/medicine-stock.component';
+import { BuyNewMedicineComponent } from './_components/_medicines/buy-new-medicine/buy-new-medicine.component';
+import { PatientsWaitingComponent } from './_components/_animals/patients-waiting/patients-waiting.component';
+import { PatientsUnderTreatmentComponent } from './_components/_animals/patients-under-treatment/patients-under-treatment.component';
+import { SicknessComponent } from './_components/_animals/sickness/sickness.component';
+import {AnimalComponent} from "./_components/_animals/animal/animal.component";
+import { AnimalsComponent } from './_components/_animals/animals/animals.component';
+import { StartPageComponent } from './_components/start-page/start-page.component';
+import { HospitalComponent } from './_components/_animals/hospital/hospital.component';
+import { IconForActiveComponent } from './_components/_animals/icons-and-buttons/icon-for-images/icon-for-active.component';
+import { ButtonForActivateComponent } from './_components/_animals/icons-and-buttons/button-for-activate/button-for-activate.component';
+import { SymbolComponent } from './_components/_animals/icons-and-buttons/symbol/symbol.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +51,14 @@ import { SicknessComponent } from './_components/sickness/sickness.component';
     BuyNewMedicineComponent,
     PatientsWaitingComponent,
     PatientsUnderTreatmentComponent,
-    GupComponent,
+    SicknessComponent,
+    AnimalsComponent,
     AnimalComponent,
-    CrewComponent,
-    MedicineComponent,
-    SicknessComponent
+    StartPageComponent,
+    HospitalComponent,
+    IconForActiveComponent,
+    ButtonForActivateComponent,
+    SymbolComponent
   ],
   imports: [
     BrowserModule,

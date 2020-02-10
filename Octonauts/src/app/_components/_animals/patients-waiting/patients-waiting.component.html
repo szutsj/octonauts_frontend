@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="column align-item-stretch justify-content-between">
+    <h3>  Várakozó betegek:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-animal *ngFor="let patient of patientWaiting" [patient]="patient" ></app-animal>
+    </div>
+  </div>
+</div>

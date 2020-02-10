@@ -81,11 +81,15 @@ export class BackendService {
   }
 
   getCrewFromBackend(): Observable<Crew> {
+    console.log("getCrewFromBackend called");
     if (this.crewData) {
+      console.log("we have data" + this.crewData.crewMembers.toString());
       return of(this.crewData);
     } else if (this.crewObservalbe) {
+      console.log("we have Observable to wait for");
       return this.crewObservalbe;
     } else {
+      console.log("We have to call backend");
       this.crewObservalbe = this.http.get<Crew>(ROOT_URL + '/octopod/crew')
         .pipe(map(response => this.crewData = response),
           share());
@@ -94,14 +98,18 @@ export class BackendService {
   }
 
   getWaitingPatientListFromBackend(): Observable<PatientList> {
+    console.log('getWaitingPatientListFromBackend called');
     if (this.waitingPatientData) {
+      console.log('We have data');
       return of(this.waitingPatientData);
     } else if (this.waitingPatientsObservable) {
+      console.log("we have Observable to wait for");
       return this.waitingPatientsObservable;
     } else {
       this.waitingPatientsObservable = this.http.get<PatientList>(ROOT_URL + '/octopod/patients/waiting')
         .pipe(map(response => this.waitingPatientData = response),
           share());
+      console.log("We have to call backend");
       return this.waitingPatientsObservable;
     }
   }
@@ -133,11 +141,15 @@ export class BackendService {
   }
 
   getUserAndPointFromBackend(): Observable<UserAndPoint> {
+    console.log('getUserAndPointFromBackend called');
     if (this.userAndPointData) {
+      console.log('We have data');
       return of(this.userAndPointData);
     } else if (this.userAndPointsObservable) {
+      console.log("we have Observable to wait for");
       return this.userAndPointsObservable;
     } else {
+      console.log("We have to call backend");
       this.userAndPointsObservable = this.http.get<UserAndPoint>(ROOT_URL + '/octopod/points')
         .pipe(map(response => this.userAndPointData = response),
           share());

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div>
+    <app-header></app-header>
+  </div>
+  <div class="column align-item-stretch justify-content-between">
+    <h3>  Aktív járművek:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-icon-for-active
+        *ngFor="let gup of activeGups"
+        [folder]="'gups'"
+        [pictureName]="gup.type"
+        [points]="gup.activationPoints"
+        [active]="gup.active">
+      </app-icon-for-active>
+    </div>
+    <h3>  Aktiválható járművek:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-button-for-activate
+        *ngFor="let gup of canBeActivated"
+        [folder]="'gups'"
+        [pictureName]="gup.type"
+        [points]="gup.activationPoints"
+        [active]="gup.active">
+      </app-button-for-activate>
+    </div>
+    <h3>  Még nem aktiválható csapattagok:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-icon-for-active
+        *ngFor="let gup of cannotBeActivated"
+        [folder]="'gups'"
+        [pictureName]="gup.type"
+        [points]="gup.activationPoints"
+        [active]="gup.active">
+      </app-icon-for-active>
+    </div>
+  </div>
+</div>

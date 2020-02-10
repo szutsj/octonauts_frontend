@@ -1,0 +1,7 @@
+<app-icon-for-active
+  *ngFor="let medicine of medicineStock"
+  [folder]="'medicine'"
+  [pictureName]="medicine.type"
+  [points]="medicine.price"
+  [active]=true>
+</app-icon-for-active>

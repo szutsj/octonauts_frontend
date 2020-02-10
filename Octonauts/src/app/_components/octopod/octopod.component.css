@@ -1,8 +1,16 @@
-html {
-    background: url("~src/assets/images/background/background1.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+/*html {*/
+    /*background: url("~src/assets/images/background/background1.jpg") no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
+
+/*.column {*/
+  /*min-height: 100vh;*/
+  /*background-image: url("~src/assets/images/background/background1.jpg");*/
+  /*background-color: #cccccc;*/
+  /*background-size: cover;*/
+/*}*/
+
 

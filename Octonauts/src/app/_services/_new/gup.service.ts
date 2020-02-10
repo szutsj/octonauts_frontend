@@ -18,8 +18,4 @@ export class GupService {
 
   constructor(private http: HttpClient, private errorHandlingService: ErrorHandlingService, private router: Router) { }
 
-  getDataFromBackend(): Observable<Gups> {
-    return this.http.get<Gups>(ROOT_URL + '/octopod/gups');
-  }
-
 }

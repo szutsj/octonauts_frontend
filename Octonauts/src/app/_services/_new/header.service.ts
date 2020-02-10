@@ -18,9 +18,7 @@ export class HeaderService {
 
   constructor(private http: HttpClient, private errorHandlingService: ErrorHandlingService, private router: Router) { }
 
-  getDataFromBackend(): Observable<Octopod> {
-    return this.http.get<Octopod>(ROOT_URL + '/octopod');
-  }
+
 
   logoutUser() {
     localStorage.removeItem('TOKEN');

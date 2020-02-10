@@ -1,0 +1,8 @@
+img {
+  height: 100px;
+}
+
+.inactive {
+filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+}

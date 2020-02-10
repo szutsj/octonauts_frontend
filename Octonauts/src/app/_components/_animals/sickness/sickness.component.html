@@ -1,0 +1,14 @@
+<img src="../../assets/images/sickness/{{sickness.type}}.png" alt="Can't find."><br>
+<h6>Gyógyításhoz szükséges gyógyszerek: </h6>
+<div class="row align-items-left justify-content-around">
+  <app-icon-for-active
+    *ngFor="let medicine of sickness.medicinesNeeded"
+    [folder]="'medicine'"
+    [pictureName]="medicine.type"
+    [points]="medicine.price"
+    [active]=true>
+  </app-icon-for-active>
+</div>
+
+
+

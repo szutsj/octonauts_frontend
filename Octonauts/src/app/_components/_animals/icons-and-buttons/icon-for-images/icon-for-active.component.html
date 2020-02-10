@@ -1,0 +1,10 @@
+<span *ngIf="active">
+  <img class="active" src="../../assets/images/{{folder}}/{{pictureName}}.png" alt="Can't find.">
+</span>
+<span *ngIf="!active">
+  <img class="inactive" src="../../assets/images/{{folder}}/{{pictureName}}.png" alt="Can't find.">
+  {{points}} <app-symbol></app-symbol>
+</span>
+
+
+

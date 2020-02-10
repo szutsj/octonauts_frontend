@@ -2,15 +2,44 @@
   <div>
     <app-header></app-header>
   </div>
-  <div class="row">
-    <div class="col">
-      <app-crew-activation></app-crew-activation>
+  <div class="column justify-content-between">
+    <div>
+      <h3>  A csapatod jelenleg:</h3>
+      <div class="row align-items-left justify-content-around">
+        <app-icon-for-active
+          *ngFor="let crewMember of crew"
+          [folder]="'crew'"
+          [pictureName]="crewMember.name"
+          [points]="crewMember.activationPoints"
+          [active]="crewMember.active">
+        </app-icon-for-active>
+      </div>
     </div>
-     <div class="col">
-      <app-gup-activation></app-gup-activation>
+    <div>
+      <h3>  A járműveid jelenleg:</h3>
+      <div class="row align-items-left justify-content-around">
+        <app-icon-for-active
+          *ngFor="let gup of gups"
+          [folder]="'gups'"
+          [pictureName]="gup.type"
+          [points]="gup.activationPoints"
+          [active]="gup.active">
+        </app-icon-for-active>
+      </div>
     </div>
-    <div class="col">
-      <app-medicine-stock></app-medicine-stock>
+    <div>
+      <h3>  A gyógyszerkészleted jelenleg:</h3>
+      <div class="row align-items-left justify-content-around">
+        <app-icon-for-active
+          *ngFor="let medicine of medicineStock"
+          [folder]="'medicine'"
+          [pictureName]="medicine.type"
+          [points]="medicine.price"
+          [active]=true>
+        </app-icon-for-active>
+      </div>
     </div>
   </div>
 </div>
+
+

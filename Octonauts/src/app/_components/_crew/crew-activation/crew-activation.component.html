@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div>
+    <app-header></app-header>
+  </div>
+  <div class="column align-item-stretch justify-content-between">
+    <h3>  Aktív csapattagok:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-icon-for-active
+        *ngFor="let crewMember of activeCrew"
+        [folder]="'crew'"
+        [pictureName]="crewMember.name"
+        [points]="crewMember.activationPoints"
+        [active]="crewMember.active">
+      </app-icon-for-active>
+    </div>
+    <h3>  Aktiválható csapattagok:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-button-for-activate
+        *ngFor="let crewMember of canBeActivated"
+        [folder]="'crew'"
+        [pictureName]="crewMember.name"
+        [points]="crewMember.activationPoints"
+        [active]="crewMember.active">
+      </app-button-for-activate>
+    </div>
+    <h3>  Még nem aktiválható járművek:</h3>
+    <div class="row align-items-left justify-content-around">
+      <app-icon-for-active
+        *ngFor="let crewMember of cannotBeActivated"
+        [folder]="'crew'"
+        [pictureName]="crewMember.name"
+        [points]="crewMember.activationPoints"
+        [active]="crewMember.active">
+      </app-icon-for-active>
+    </div>
+  </div>
+</div>
